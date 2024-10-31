@@ -8,7 +8,7 @@
 /* Estilização do body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #e0e0e0;
     color: #333;
 }
 
@@ -98,3 +98,51 @@ header {
         padding: 8px 15px;
     }
 }
+
+    /* Estiliza a área de grade 3x3 */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+        gap: 15px; /* Espaço entre os blocos */
+        max-width: 950px; /* Largura máxima da grade */
+        margin: 0 auto; /* Centraliza a grade */
+        padding: 20px;
+      }   
+      /* Estiliza cada bloco individualmente */
+      .grid-item {
+        font-size: 12px;
+        background-color: #f0f0f0; /* Cor de fundo dos blocos */
+        border-radius: 8px;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+  
+      .grid-item:hover {
+        transform: scale(1.05); /* Animação ao passar o mouse */
+      }
+  
+      /* Estiliza a imagem dentro do bloco */
+      .grid-item img {
+        width: 100%; /* Imagem ocupa a largura completa do bloco */
+        height: auto;
+      }
+  
+      /* Estiliza o botão */
+      .grid-item button {
+        width: 90%;
+        padding: 10px;
+        margin: 15px auto;
+        background-color: #4CAF50; /* Cor do botão */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+      }
+  
+      .grid-item button:hover {
+        background-color: #45a049;
+      }
