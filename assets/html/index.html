@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="icon" href="/assets/img/capelo.png">
-    <link rel="" href="">
     <title>CursosWEB - Melhor site de cursos (online)</title>
 </head>
-<body>
 
+<body>
+    
     <script>
-        window.onload = function() {
+        window.onload = function () {
             const loadingScreen = document.getElementById('loading-screen');
             loadingScreen.style.display = 'none'; // Oculta a telinha de carregamento
         };
+
+        function performSearch() {
+    const searchTerm = document.getElementById("searchInput").value;
+    
+    // Verifica se o campo está vazio
+    if (searchTerm.trim() === "") {
+      alert("Por favor, digite algo para buscar.");
+      return;
+    }
+
+    // Envia o termo de busca para o servidor (pode ser GET ou POST)
+    window.location.href = `/search?query=${encodeURIComponent(searchTerm)}`;
+  }
     </script>
+    
 
     <header>
         <div class="logo">
@@ -30,12 +45,113 @@
         </nav>
         <div class="signup">
             <!-- Botão para ir para a área de sign-up -->
-            <a href="#signup" class="signup-button"><b>Sign Up</b></a>
+            <a href="/assets/html/singup.html" class="signup-button"><b>Sign Up</b></a>
         </div>
     </header>
 
     <div id="loading-screen">
         <div class="spinner"></div>
     </div>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Digite sua busca...">
+        <button class="search-button" onclick="performSearch()"><b>Buscar</b></button>
+      </div>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="https://cursoseducaweb.com.br/images/cursos/curso-de-autismo.jpg" alt="Imagem 1">
+            <h3>Curso de Autismo</h3>
+            <hr>
+            <br>
+            <button>Acesso Gratuito</button>
+        </div>
+        <div class="grid-item">
+            <img src="https://cursoseducaweb.com.br/images/cursos/curso-de-chefia-e-lideranca.jpg" alt="Imagem 2">
+            <h3>Curso de Chefia e Liderança</h3>
+            <hr>
+            <br>
+            <button>Acesso Gratuito</button>
+        </div>
+        <div class="grid-item">
+            <img src="https://cursoseducaweb.com.br/images/cursos/curso-de-operador-de-telemarketing.jpg" alt="Imagem 3">
+            <h3>Curso de Telemarketing</h3>
+            <hr>
+            <br>
+            <button>Acesso Gratuito</button>
+        </div>
+        <div class="grid-item">
+            <img src="https://cursoseducaweb.com.br/images/cursos/curso-de-tecnicas-de-atendimento-ao-cliente.jpg" alt="Imagem 4">
+            <h3>Curso de Técnicas de Atendimento</h3>
+            <hr>
+            <br>
+            <button>Acesso Gratuito</button>
+        </div>
+        <div class="grid-item">
+            <img src="https://cursoseducaweb.com.br/images/cursos/curso-de-educacao-especial.jpg" alt="Imagem 5">
+            <h3>Curso de Educação Especial</h3>
+            <hr>
+            <br>
+            <button>Acesso Gratuito</button>
+        </div>
+        <div class="grid-item">
+            <img src="https://cursoseducaweb.com.br/images/cursos/curso-de-marketing.jpg" alt="Imagem 6">
+            <h3>Curso de Marketing</h3>
+            <hr>
+            <br>
+            <button>Acesso Gratuito</button>
+        </div>
+        <div class="grid-item">
+            <img src="https://cursoseducaweb.com.br/images/cursos/curso-de-auxiliar-administrativo.jpg" alt="Imagem 7">
+            <h3>Curso de Auxiliar Administrativo</h3>
+            <hr>
+            <br>
+            <button>Acesso Gratuito</button>
+        </div>
+        <div class="grid-item">
+            <img src="https://www.dakol.com.br/wp-content/uploads/2022/11/35237.jpg" alt="Imagem 8">
+            <h3>Curso de Gestão de Negócio</h3>
+            <hr>
+            <br>
+            <button>Acesso Gratuito</button>
+        </div>
+        <div class="grid-item">
+            <img src="https://cursoseducaweb.com.br/images/cursos/curso-de-educacao-inclusiva.jpg" alt="Imagem 9">
+            <h3>Curso de Educação Inclusiva</h3>
+            <hr>
+            <br>
+            <button>Acesso Gratuito </button>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-container">
+          <div class="footer-section about">
+            <h4>Sobre Nós</h4>
+            <p>O cusosWEB nasceu com o objetivo de oferecer cursos gratuitos e acessíveis para todos que desejam aprender e desenvolver suas habilidades.</p>
+          </div>
+          <div class="footer-section policies">
+            <h4>Políticas</h4>
+            <ul>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Termos de Uso</a></li>
+            </ul>
+          </div>
+          <div class="footer-section social">
+            <h4>Social</h4>
+            <ul>
+                <li><a href="https://www.facebook.com/" target="_blank"><img src="/assets/img/facebook.png" alt="">| Facebook</a></li>
+                <li><a href="https://www.instagram.com/" target="_blank"><img src="/assets/img/instagram.png" alt="">| Instagram</a></li>
+                <li><a href="https://x.com/" target="_blank"><img src="/assets/img/twitter.png" alt="">| twitter</a></li>
+              </ul>
+          </div>
+          <div class="footer-section contact">
+            <h4>Contato</h4>
+            <p>Email: CursosWEB@gmil.com</p>
+            <p>Telefone: (11) 1234-5678</p>
+          </div>
+        </div>
+      </footer>
 </body>
+
 </html>
