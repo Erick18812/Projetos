@@ -75,9 +75,10 @@ header {
 }
 
 .container {
+    display: flex;
+    margin-left: 150px;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 300px;
     align-items: center;
     display: flex;
     gap: 20px;
