@@ -1,17 +1,42 @@
 *{
     margin: 0;
-    padding:0
+    padding:0; testing
 }
 
-.container{
+ .container{
     display: grid;
-    grid-template-columns: 200px,300px;
-    gap: 200px, 100px, 50px;
+    grid-template-areas: 
+    'header header'
+    'aside article'
+    'section section'
+    'footer footer';
+    gap: 30px;
+    grid-auto-rows: 200px;    
 }
+
+header{
+    grid-area: header;
+    background-color:blueviolet; 
+}
+
+aside{
+    grid-area: aside;
+    background-color: crimson;
+}
+article{
+    grid-area: article;
+    background-color:darkslategray;
+}
+section{
+    grid-area: section;
+    background-color: darkorange;
+}
+footer{
+    grid-area: footer;
+    background-color: yellow;
+}
+
 
 .item{
-    background-color:blueviolet;
-    padding: 20px;
-    margin: 20px;
-    height: 100px;
+    height: 200px;
 }
