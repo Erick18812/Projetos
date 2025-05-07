@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" id="termos"> Aceito os termos
+    <button onclick="verificar()">Verificar</button>
+
+    <script>
+        function verificar() {
+            let termos = document.getElementById("termos").checked;
+            if (!termos) {
+                alert ("Você precisa aceitar os termos!");
+            } 
+            else{
+                alert ("Obrigado!");
+            }
+        }
+    </script>
+
+</body>
+</html>
