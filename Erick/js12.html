@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Abra o console para ver os resultados</h1>
+
+    <input type="text" id="nome" placeholder="Digite seu nome">
+    <input type="number" id="n1" placeholder="Digite seu número">
+    <input type="number" id="n2" placeholder="digite outro número">
+    <button onclick="calc()">Enviar</button>
+
+    <script>
+        let a = Number(document.getElementById('n1')).value;
+        let b = Number(document.getElementById('n2')).value;
+        let name = String(document.getElementById('nome')).value;
+
+        console.log("Olá" + name + "A soma da sua conta é:", a + b);
+        console.log("Subtração:", a - b);
+        console.log("Multiplicação:", a * b);
+        console.log("Divisâo:", a/ b);
+        console.log("Resto da divisão:", a % b);
+    </script>
+    
+</body>
+</html>
