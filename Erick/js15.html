@@ -19,10 +19,16 @@
             let Imposto  = salario * ("100%");
             let desconto = salario + ('inss/100');
             let liquido = salario - Imposto;
-
-            if(salario < 2000) {
-              salario - salario * 10/100 
+            
+            if(salario <= 2000) {
+              salario = (salario + salario*10/100)
             }
+            else if(salario > 2000 && salario < 4000) {
+                salario = (salario + salario*7/100)
+            }
+
+            else if(salario > 4000)
+            salario = (salario + salario*5/100)
 
             document.getElementById('resultado').innerText = 'salario liquido: R$' + liquido.toFixed(2);
         }
