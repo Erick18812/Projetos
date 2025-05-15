@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="Página de login.css">
+  <style>
+    body {font-family: sans-serif; background: #eef; display: flex; justify-content: center; align-items: center; height: 90vh;}
+    .box {background: #fff; padding: 80px; border-radius: 8px;  width: 250px;}
+    h2 {text-align: center;}
+    input, button {width: 100%; padding: 10px; margin: 15px 0;}
+    .msg {text-align: center; font-weight: bold;}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Login</h1>
+    <input id="user" placeholder="Usuário">
+    <input id="pass" type="password" placeholder="Senha">
+    <button onclick="login()">Entrar</button>
+    <div class="msg" id="msg"></div>
+  </div>
+  <script>
+    function login() {
+      let u = document.getElementById("user").value;
+      let p = document.getElementById("pass").value;
+      let m = document.getElementById("msg");
+      if (u === "admin" && p === "1234") {
+        m.style.color = "green"; m.textContent = "Bem Vindo :)";
+         window.location.href = "Página de Login.css";
+      } else {
+        m.style.color = "red"; m.textContent = "Login Inválido :(";
+      }
+    }
+  </script>
+</body>
+</html>
