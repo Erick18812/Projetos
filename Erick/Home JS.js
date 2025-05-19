@@ -14,7 +14,7 @@
 
             let user = document.getElementById('user').value;
             let senha = document.getElementById('senha').value;
-            }
+        }
     </script>
 </body>
 </body>
