@@ -1,16 +1,16 @@
 :root {
      
-    --cor-primaria: #375cc4db;
-    --cor-secundaria: #4A2885;
-    --cor-texto: #a0b0d0e4;
-    --cor-fundo: #d5a3d4d1;
-    --cor-hover: #a41553;    
+    --cor-primaria: #161a24f1;
+    --cor-secundaria: #0b0515;
+    --cor-texto: #e2e7eef8;
+    --cor-fundo: #120a11;
+    --cor-hover: #171214;    
 }
 
 
 /*Fundo*/
 body{
-    background: var(--cor-fundo);
+    background: var(--cor-hover);
     display:flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +21,7 @@ body{
 header{
     text-align: center;
     padding: 90px;
-    background: linear-gradient(to center, var(--cor-primaria), var
+    background: linear-gradient(to center, var(--cor-texto), var
     (--cor-secundaria));
     color: white;
 } 
@@ -31,13 +31,13 @@ header{
 .container{
     display: flex;
     justify-content: center;
-    background: linear-gradient(to center, var(--cor-primaria), var(--cor-secundaria));
+    background: linear-gradient(to center, var(--cor-hover), var(--cor-secundaria));
     padding: 100px;
     border-radius: 10px;
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 20px 40px #fc0909ac;
     text-align: center;
     width: 100px;
-    color: var(--cor-texto);
+    color: var(--cor-hover);
 }
 
 /*Login*/
