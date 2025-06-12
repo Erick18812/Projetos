@@ -1,0 +1,40 @@
+/*menu.css*/
+.body {
+    font-family: Arial, sans-serif;
+}
+.menu{
+    background-color: rgb(200, 235, 103);
+    padding:0;
+    }
+    
+.menu-toggle {
+   background: none;
+   border: none;
+   color: ivory;
+   font-size: 24px;
+   cursor: pointer;
+   display: none;
+}
+
+.menu-list a {
+    color: white;
+    text-decoration: none;
+
+}
+
+/*Responsividade*/
+@media(max-width: 600px) {
+    .menu-toggle {
+        display: block;
+}
+
+.menu-list {
+    display: none;
+    flex-direction:column;
+    background-color: #444;
+}
+
+.menu-list.active {
+    display: flex;
+ }
+}
